@@ -159,41 +159,41 @@
 //*  який повертає об'єкт з ідентифікатором співробітника,
 //*  зарплатою та відділом, в якому працює співробітник.
 
-class Person {
-  constructor(name, age, gender, email) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.email = email;
-  }
+// class Person {
+//   constructor(name, age, gender, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
 
-  getDetails() {
-    return {
-      name: this.name,
-      age: this.age,
-      gender: this.gender,
-      email: this.email,
-    };
-  }
-}
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
 
-class Employee extends Person {
-  constructor(name, age, gender, email, salary, department) {
-    super(name, age, gender, email); // Викликаємо конструктор батьківського класу
-    this.salary = salary;
-    this.department = department;
-    this.employeeId = Math.floor(Math.random() * 10000); // Генеруємо унікальний ID
-  }
+// class Employee extends Person {
+//   constructor(name, age, gender, email, salary, department) {
+//     super(name, age, gender, email); // Викликаємо конструктор батьківського класу
+//     this.salary = salary;
+//     this.department = department;
+//     this.employeeId = Math.floor(Math.random() * 10000); // Генеруємо унікальний ID
+//   }
 
-  // Метод для отримання деталей про працівника
-  getEmployeeDetails() {
-    return {
-      employeeId: this.employeeId,
-      salary: this.salary,
-      department: this.department,
-    };
-  }
-}
+// Метод для отримання деталей про працівника
+//   getEmployeeDetails() {
+//     return {
+//       employeeId: this.employeeId,
+//       salary: this.salary,
+//       department: this.department,
+//     };
+//   }
+// }
 
 // const vitalina = new Person({
 //   name: "Vitalina",
@@ -202,6 +202,6 @@ class Employee extends Person {
 //   email: "vitalina@gmail.com",
 // });
 
-const vitalina = new Person("Vitalina", 34, "woman", "vitalina@gmail.com");
-console.log(vitalina.getDetails());
+// const vitalina = new Person("Vitalina", 34, "woman", "vitalina@gmail.com");
+// console.log(vitalina.getDetails());
 // const anna = console.log(vitalina.getEmployeeDetails());
