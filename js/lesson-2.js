@@ -127,25 +127,25 @@
 //* Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
 //* назвою фрукта, це також треба урахувати.
 
-function calcTotalPrice(fruits, fruitName) {
-  //   const totalPrice = 0;
-  //   for (const fruit of fruits) {
-  //     if (fruit.name === fruitName) {
-  //       return (totalPrice = fruit.price * fruit.quantity);
-  //     }
-  //   }
-  return fruits
-    .filter((fruit) => fruit.name === fruitName)
-    .reduce((total, fruit) => total + fruit.price * fruit.quantity, 0);
-}
+// function calcTotalPrice(fruits, fruitName) {
+//   //   const totalPrice = 0;
+//   //   for (const fruit of fruits) {
+//   //     if (fruit.name === fruitName) {
+//   //       return (totalPrice = fruit.price * fruit.quantity);
+//   //     }
+//   //   }
+//   return fruits
+//     .filter((fruit) => fruit.name === fruitName)
+//     .reduce((total, fruit) => total + fruit.price * fruit.quantity, 0);
+// }
 
-const fruits = [
-  { name: "Яблуко", price: 45, quantity: 7 },
-  { name: "Апельсин", price: 60, quantity: 4 },
-  { name: "Банан", price: 125, quantity: 8 },
-  { name: "Груша", price: 350, quantity: 2 },
-  { name: "Виноград", price: 440, quantity: 3 },
-  { name: "Банан", price: 125, quantity: 3 },
-];
+// const fruits = [
+//   { name: "Яблуко", price: 45, quantity: 7 },
+//   { name: "Апельсин", price: 60, quantity: 4 },
+//   { name: "Банан", price: 125, quantity: 8 },
+//   { name: "Груша", price: 350, quantity: 2 },
+//   { name: "Виноград", price: 440, quantity: 3 },
+//   { name: "Банан", price: 125, quantity: 3 },
+// ];
 
-console.log(calcTotalPrice(fruits, "Банан"));
+// console.log(calcTotalPrice(fruits, "Банан"));

@@ -12,11 +12,13 @@
 //* з масивів values кожного об'єкту, збережених в одному масиві.
 //* Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
-//? const data = [
-//?  { id: 1, values: [1, 2, 3] },
-//?  { id: 2, values: [4, 5, 6] },
-//?  { id: 3, values: [7, 8, 9] },
-//? ];
+// const data = [
+//   { id: 1, values: [1, 2, 3] },
+//   { id: 2, values: [4, 5, 6] },
+//   { id: 3, values: [7, 8, 9] },
+// ];
+
+// const newArray = data.flatMap(val);
 
 //! Завдання 3:
 
@@ -24,31 +26,43 @@
 //* Перевірте, чи є хоча б один об'єкт з віком менше 20 років.
 //* Очікуваний результат: true.
 
-//? const people = [
-//?  { name: 'John', age: 27 },
-//?  { name: 'Jane', age: 31 },
-//?  { name: 'Bob', age: 19 },
-//? ];
+// const people = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
+// ];
+
+// const peopleAge = people.some((item) => item.age < 20);
+// console.log(peopleAge);
 
 //! Завдання 4:
 
 //* Дано масив чисел [2, 4, 6, 8, 10].
 //* Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
 
-//? const numbers = [2, 4, 6, 8, 10];
+// const numbers = [2, 4, 6, 8, 10];
+
+// const result = numbers.every((number) => number % 2 === 0);
+// console.log(result);
 
 //! Завдання 5:
 
 //* Знайдіть перше непарне число
 
-//? const numbers = [2, 1, 6, 8, 9, 10, 12];
+// const numbers = [2, 1, 6, 8, 9, 10, 12];
+
+// const evenNum = numbers.find((number) => number % 2 === 0);
+// console.log(evenNum);
 
 //! Завдання 6:
 
 //* Відсортуйте масив чисел [4, 2, 5, 1, 3]
 //* у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
-//? const numbersArray = [4, 2, 5, 1, 3];
+// const numbersArray = [4, 2, 5, 1, 3];
+
+// const newArr = numbersArray.toSorted((a, b) => a - b);
+// console.log(newArr);
 
 //! Завдання 7:
 
@@ -56,18 +70,24 @@
 //*  у порядку алфавіту.
 //* Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
-//? const stringArray = ['banana', 'orange', 'apple', 'pear'];
+// const stringArray = ["banana", "orange", "apple", "pear"];
+
+// const newString = stringArray.toSorted((a, b) => a.localeCompare(b));
+// console.log(newString);
 
 //! Завдання 8:
 
 //*  Відсортуйте масив об'єктів за віком у порядку зростання.
 //* Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
 
-//? const users = [
-//?  { name: 'John', age: 27 },
-//?  { name: 'Jane', age: 31 },
-//?  { name: 'Bob', age: 19 },
-//? ];
+// const users = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
+// ];
+
+// const userAge = users.toSorted((a, b) => a.age - b.age);
+// console.log(userAge);
 
 //! Завдання 9:
 
@@ -76,18 +96,24 @@
 //* вік більше 20 років.
 //* Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
-//? const user = [
-//?  { name: 'John', age: 27 },
-//?  { name: 'Jane', age: 31 },
-//?  { name: 'Bob', age: 19 },
-//? ]
+// const user = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
+// ];
+
+// const users = user.filter((item) => item.age > 20);
+// console.log(users);
 
 //! Завдання 10:
 
 //* Дано масив чисел [1, 2, 3, 4, 5].
 //* Застосуйте метод для обчислення суми елементів масиву.
 
-//? const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
+
+// const total = numbers.reduce((sum, number) => sum + number, 0);
+// console.log(total);
 
 //! Завдання 11:
 
@@ -103,41 +129,40 @@
 //* Оголоси приватні властивості #login #email, доступ до яких зроби
 //* через геттер та сеттер login email
 
-// class Client {
-//   #login;
-//   #email;
+class Client {
+  #login;
+  #email;
 
-//   constructor(login, email) {
-//     this.#login = login;
-//     this.#email = email;
-//   }
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
+  }
 
-//   get login() {
-//     return this.#login;
-//   }
+  get login() {
+    return this.#login;
+  }
 
-//   set login(newLogin) {
-//     this.#login = newLogin;
-//   }
+  set login(newLogin) {
+    this.#login = newLogin;
+  }
 
-//   getEmail() {
-//     return this.#email;
-//   }
+  get email() {
+    return this.#email;
+  }
 
-//   setEmail(newEmail) {
-//     this.#email = newEmail;
-//   }
-// }
+  set email(newEmail) {
+    this.#email = newEmail;
+  }
+}
 
-// const vitalina = new Client("Vitalina", "vitalina@gmail.com");
+const vitalina = new Client("Vitalina", "vitalina@gmail.com");
 
-// vitalina.login = "Student Vitalina";
+vitalina.login = "Student Vitalina";
+vitalina.email = "student_vitalina@gmail.com";
 
-// vitalina.setEmail("student_vitalina@gmail.com");
-
-// console.log(vitalina);
-
-// console.log(vitalina.getEmail());
+console.log(vitalina);
+console.log(vitalina.login);
+console.log(vitalina.email);
 
 //! Завдання 13:
 
