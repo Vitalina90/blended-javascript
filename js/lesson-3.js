@@ -129,40 +129,40 @@
 //* Оголоси приватні властивості #login #email, доступ до яких зроби
 //* через геттер та сеттер login email
 
-class Client {
-  #login;
-  #email;
+// class Client {
+//   #login;
+//   #email;
 
-  constructor(login, email) {
-    this.#login = login;
-    this.#email = email;
-  }
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
 
-  get login() {
-    return this.#login;
-  }
+//   get login() {
+//     return this.#login;
+//   }
 
-  set login(newLogin) {
-    this.#login = newLogin;
-  }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
 
-  get email() {
-    return this.#email;
-  }
+//   get email() {
+//     return this.#email;
+//   }
 
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-const vitalina = new Client("Vitalina", "vitalina@gmail.com");
+// const vitalina = new Client("Vitalina", "vitalina@gmail.com");
 
-vitalina.login = "Student Vitalina";
-vitalina.email = "student_vitalina@gmail.com";
+// vitalina.login = "Student Vitalina";
+// vitalina.email = "student_vitalina@gmail.com";
 
-console.log(vitalina);
-console.log(vitalina.login);
-console.log(vitalina.email);
+// console.log(vitalina);
+// console.log(vitalina.login);
+// console.log(vitalina.email);
 
 //! Завдання 13:
 
